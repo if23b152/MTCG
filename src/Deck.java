@@ -1,10 +1,12 @@
+import Controller.Battle;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Deck {
-    private List<Card> cards = new ArrayList<>();
+    private List<Battle.Card> cards = new ArrayList<>();
 
-    public void addCard(Card card) {
+    public void addCard(Battle.Card card) {
         if (cards.size() < 4) {
             cards.add(card);
         } else {
@@ -12,11 +14,11 @@ public class Deck {
         }
     }
 
-    public void removeCard(Card card) {
+    public void removeCard(Battle.Card card) {
         cards.remove(card);
     }
 
-    public List<Card> getBestCards() {
+    public List<Battle.Card> getBestCards() {
         // Logik, um die besten Karten zu erhalten
         return cards.subList(0, Math.min(cards.size(), 4));
     }
