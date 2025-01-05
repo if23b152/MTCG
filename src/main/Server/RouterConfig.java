@@ -26,11 +26,9 @@ public class RouterConfig {
         this.battleController = new BattleController(users);
         this.tradingController = new TradingController(cardController);
         this.statsController = new StatsController(users);
-        setupRoutes();
-        setupRoutes();
-        setupRoutes();
-
+        setupRoutes(); // Only one call
     }
+
 
     private void setupRoutes() {
         // User Management Routes

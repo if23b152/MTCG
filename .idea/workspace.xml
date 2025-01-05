@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited">
-      <change beforePath="$PROJECT_DIR$/src/Controller/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTCG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MTCG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/TradingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTCG/main/Controller/TradingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTCG/main/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/TradingDeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTCG/main/Models/TradingDeal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller/TradingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller/TradingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/DeckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/DeckRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/TradingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/TradingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/TradingDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/TradingDeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Server/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/RouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Server/RouterConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +74,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "Application.MainServerApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/iboba/IdeaProjects/MTCG/lib/postgresql-42.7.4.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
@@ -140,7 +155,8 @@
       <workItem from="1732029653114" duration="11082000" />
       <workItem from="1733318125905" duration="407000" />
       <workItem from="1734042837783" duration="7798000" />
-      <workItem from="1734092658214" duration="27415000" />
+      <workItem from="1734092658214" duration="40916000" />
+      <workItem from="1735830598210" duration="20545000" />
     </task>
     <task id="LOCAL-00001" summary="ready to commit">
       <option name="closed" value="true" />
@@ -165,6 +181,37 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -175,7 +222,14 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
                       </list>
                     </value>
                   </entry>
@@ -191,5 +245,30 @@
     <MESSAGE value="ready to commit" />
     <MESSAGE value="commited" />
     <option name="LAST_COMMIT_MESSAGE" value="commited" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/Server/Router.java</url>
+          <line>18</line>
+          <properties class="main.Server.Router" method="handleRequest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Server/Router.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Server/Router.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

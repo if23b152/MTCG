@@ -31,11 +31,11 @@ public class TradingController {
                 return new Response(400, "Invalid trading deal data");
             }
 
-            if (tradingDeals.containsKey(deal.getId())) {
+            if (tradingDeals.containsKey(deal.getId().toString())) {
                 return new Response(409, "A deal with this ID already exists");
             }
 
-            tradingDeals.put(deal.getId(), deal);
+            tradingDeals.put(deal.getId().toString(), deal);
             return new Response(201, "Trading deal successfully created");
         } catch (Exception e) {
             return new Response(400, "Invalid request");
@@ -64,8 +64,8 @@ public class TradingController {
             return new Response(404, "Trading deal not found");
         }
 
-        String cardToTradeOwner = extractUsername(deal.getCardToTrade());
-        if (username.equals(cardToTradeOwner)) {
+        MonsterCard cardToTrade = cardController.findCardById(username, deal.getCardToTrade().toString());
+        if (cardToTrade == null) {
             return new Response(403, "Trading with yourself is not allowed");
         }
 
@@ -80,7 +80,8 @@ public class TradingController {
             return new Response(403, "The offered card does not meet the trading requirements");
         }
 
-        cardController.exchangeCards(cardToTradeOwner, username, deal.getCardToTrade(), offeredCardId);
+        String cardToTradeOwner = username; // Der aktuelle Benutzer ist der Besitzer
+        cardController.exchangeCards(cardToTradeOwner, username, deal.getCardToTrade().toString(), offeredCardId);
         tradingDeals.remove(tradingDealId);
 
         return new Response(200, "Trading deal successfully executed");
@@ -109,8 +110,8 @@ public class TradingController {
             TradingDeal deal = iterator.next();
             json.append(String.format(
                     "{\"Id\":\"%s\",\"CardToTrade\":\"%s\",\"Type\":\"%s\",\"MinimumDamage\":%.1f}",
-                    deal.getId(),
-                    deal.getCardToTrade(),
+                    deal.getId().toString(),
+                    deal.getCardToTrade().toString(),
                     deal.getType(),
                     deal.getMinimumDamage()
             ));
