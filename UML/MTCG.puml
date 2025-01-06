@@ -1,0 +1,49 @@
+@startuml
+
+participant BattleController
+participant Battle
+participant Deck
+participant MonsterCard
+database UserRepository
+
+autonumber
+
+Player1 -> BattleController: startBattle(Request)
+activate BattleController
+
+BattleController -> UserRepository: findByUsername(player1)
+BattleController -> UserRepository: findByUsername(player2)
+
+group Battle Initialization
+    BattleController -> Battle: new Battle(player1, deck1, player2, deck2)
+    activate Battle
+end
+
+loop 100 rounds
+    Battle -> Deck: getRandomCard(deck1)
+    Battle -> Deck: getRandomCard(deck2)
+
+    group Combat Round
+        Battle -> MonsterCard: calculateEffectiveDamage(card1, card2)
+
+        alt card1 wins
+            Battle -> Deck: moveCard(card2, deck1)
+        else card2 wins
+            Battle -> Deck: moveCard(card1, deck2)
+        else draw
+            Battle -> Deck: returnCards()
+        end
+    end
+
+    Battle -> Battle: updateBattleLog()
+end
+
+Battle -> BattleController: battleLog
+deactivate Battle
+
+BattleController -> UserRepository: updateStats(player1)
+BattleController -> UserRepository: updateStats(player2)
+
+BattleController --> Player1: Response(battleLog)
+deactivate BattleController
+@enduml

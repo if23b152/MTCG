@@ -4,67 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/BattleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/StatsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTCG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MTCG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/MTCG.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/BattleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/CardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/StatsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/TradingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/Battle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/ElementType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/MonsterCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/TradingDeal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Deck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/HttpServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/RequestHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Router$RequestHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Router.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/RouterConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MTCG.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller/BattleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller/CardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller/StatsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller/TradingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/TradingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/CardRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/DeckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DeckRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/TradingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/TradingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/Battle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/ElementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ElementType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/MonsterCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/MonsterCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/TradingDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TradingDeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/RouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/RouterConfig.java" afterDir="false" />
-    </list>
+    <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,7 +232,7 @@
       <workItem from="1734092658214" duration="40916000" />
       <workItem from="1735830598210" duration="59246000" />
       <workItem from="1736178261910" duration="116000" />
-      <workItem from="1736178381713" duration="5154000" />
+      <workItem from="1736178381713" duration="7218000" />
     </task>
     <task id="LOCAL-00001" summary="ready to commit">
       <option name="closed" value="true" />
@@ -318,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736098206634</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commited">
+      <option name="closed" value="true" />
+      <created>1736184352177</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736184352177</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
