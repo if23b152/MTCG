@@ -5,22 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/BattleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/StatsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MTCG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MTCG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/TradingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTCG/main/Controller/TradingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTCG/main/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/TradingDeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTCG/main/Models/TradingDeal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller/TradingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller/TradingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/CardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/DeckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/DeckRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/TradingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/TradingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Database/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Database/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/TradingDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/TradingDeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Server/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Server/RouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Server/RouterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/MTCG.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/BattleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/CardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/StatsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/TradingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/Battle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/ElementType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/MonsterCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/TradingDeal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Deck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/HttpServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/RequestHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Router$RequestHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/Router.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTCG/main/Server/RouterConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MTCG.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller/BattleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller/CardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller/StatsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller/TradingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/TradingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/CardRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/DeckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DeckRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/TradingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/TradingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Database/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/Battle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/ElementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ElementType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/MonsterCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/MonsterCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/TradingDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TradingDeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/RouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/RouterConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,54 +117,145 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main (1).executor": "Run",
+    "Application.Main.executor": "Run",
     "Application.MainServerApp.executor": "Run",
+    "JUnit.All in MTCG.executor": "Run",
+    "JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid.executor": "Run",
+    "JUnit.CardControllerTest.testCreatePackageWithValidAdmin.executor": "Run",
+    "JUnit.CardControllerTest.testGetCardsForValidUser.executor": "Run",
+    "JUnit.CardControllerTest.testUserInitialStats.executor": "Run",
+    "JUnit.CardControllerTest.testUserProfileToJson.executor": "Run",
+    "JUnit.CardControllerTests.testConfigureDeckSuccess.executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageInvalidSize.executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageNotAdmin.executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageSuccess (1).executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageSuccess.executor": "Run",
+    "JUnit.MTCGTests.executor": "Run",
+    "JUnit.MTCGTests.testCreatePackageNotAdmin.executor": "Run",
+    "JUnit.MTCGTests.testCreatePackageSuccess.executor": "Run",
+    "JUnit.MTCGTests.testDeckCardRemoval.executor": "Run",
+    "JUnit.MTCGTests.testElementTypeFromCardName.executor": "Run",
+    "JUnit.MTCGTests.testUserCreation.executor": "Run",
+    "JUnit.MTCGtest in MTCG.executor": "Run",
+    "JUnit.java in MTCG.executor": "Run",
+    "JUnit.main.Controller in MTCG.executor": "Run",
+    "JUnit.test in MTCG.executor": "Run",
+    "JUnit.test-annotations in MTCG.executor": "Run",
+    "Maven.Unknown [install].executor": "Run",
+    "Maven.mtcg [clean].executor": "Run",
+    "Maven.mtcg [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "SQL Inserts",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/iboba/IdeaProjects/MTCG/lib/postgresql-42.7.4.jar",
+    "last_directory_selection": "C:/Users/iboba/IdeaProjects/MTCG/target/generated-test-sources/test-annotations",
+    "last_opened_file_path": "C:/Users/iboba/IdeaProjects/MTCG/src/main/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\iboba\IdeaProjects\MTCG\src\main\Models" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MTCG" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTCG" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="main.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="main.Controller" />
+      <option name="MAIN_CLASS_NAME" value="main.Controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="createPackage_shouldReturn201WhenPackageIsValid" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainServerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.MainServerApp" />
+    <configuration name="CardControllerTest.testUserInitialStats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTCG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main.Controller" />
+      <option name="MAIN_CLASS_NAME" value="main.Controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="testUserInitialStats" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CardControllerTest.testUserProfileToJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MTCG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main.Controller" />
+      <option name="MAIN_CLASS_NAME" value="main.Controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="testUserProfileToJson" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in MTCG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MTCG" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid" />
+      <item itemvalue="JUnit.CardControllerTest.testUserInitialStats" />
+      <item itemvalue="JUnit.CardControllerTest.testUserProfileToJson" />
+      <item itemvalue="JUnit.java in MTCG" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MainServerApp" />
+        <item itemvalue="JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid" />
+        <item itemvalue="JUnit.java in MTCG" />
+        <item itemvalue="JUnit.CardControllerTest.testUserProfileToJson" />
+        <item itemvalue="JUnit.CardControllerTest.testUserInitialStats" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +290,9 @@
       <workItem from="1733318125905" duration="407000" />
       <workItem from="1734042837783" duration="7798000" />
       <workItem from="1734092658214" duration="40916000" />
-      <workItem from="1735830598210" duration="20545000" />
+      <workItem from="1735830598210" duration="59246000" />
+      <workItem from="1736178261910" duration="116000" />
+      <workItem from="1736178381713" duration="5154000" />
     </task>
     <task id="LOCAL-00001" summary="ready to commit">
       <option name="closed" value="true" />
@@ -174,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729205494545</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commited">
+      <option name="closed" value="true" />
+      <created>1736098206634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736098206634</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,30 +389,5 @@
     <MESSAGE value="ready to commit" />
     <MESSAGE value="commited" />
     <option name="LAST_COMMIT_MESSAGE" value="commited" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/Server/Router.java</url>
-          <line>18</line>
-          <properties class="main.Server.Router" method="handleRequest">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/Server/Router.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/Server/Router.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
