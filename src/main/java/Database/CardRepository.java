@@ -22,8 +22,8 @@ public class CardRepository {
                 throw new IllegalStateException("Not enough money");
             }
 
-            deductCoins(username, 5);
-            assignCardsToUser(packageCards, username);
+            deductCoins(username, 5); //Kauf -cons
+            assignCardsToUser(packageCards, username); //+karten
 
             connection.commit();
         } catch (Exception e) {

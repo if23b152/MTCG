@@ -67,10 +67,5 @@ public class Router {
         return false; // Ungültige Struktur
     }
 
-    public void printRoutes() {
-        for (String key : routes.keySet()) {
-            System.out.println(key);
-        }
-    }
 }
 

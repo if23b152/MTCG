@@ -80,18 +80,6 @@ public class BattleController {
     }
 
 
-    private void checkForTimeout() {
-        long currentTime = System.currentTimeMillis();
-        battleQueue.removeIf(player -> {
-            Long timestamp = queueTimestamps.get(player);
-            if (timestamp != null && currentTime - timestamp > 30000) { // 30 Sekunden Timeout
-                queueTimestamps.remove(player);
-                return true;
-            }
-            return false;
-        });
-    }
-
     private void updateUserStats(User user1, User user2, String battleLog) {
         int k = 32; // K-Faktor für ELO-Berechnung
 

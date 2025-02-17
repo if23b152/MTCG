@@ -6,27 +6,31 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class HttpServer {
     private final ServerSocket serverSocket;
     private final int port = 10001;
     private final Router router;
+    private final ExecutorService threadPool;
 
     public HttpServer() throws IOException {
         this.serverSocket = new ServerSocket(port);
         this.router = new Router();
         new RouterConfig(router);
+        this.threadPool = Executors.newFixedThreadPool(10); // 10 gleichzeitige Threads
     }
 
     public void start() {
-        try {
-            System.out.println("Server started on port " + port);
-            while (true) {
+        System.out.println("Server started on port " + port);
+        while (true) {
+            try {
                 Socket clientSocket = serverSocket.accept();
-                handleClient(clientSocket);
+                threadPool.execute(() -> handleClient(clientSocket)); // Multithreading aktiv
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -42,6 +46,12 @@ public class HttpServer {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                clientSocket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -92,6 +102,7 @@ public class HttpServer {
         try {
             if (serverSocket != null && !serverSocket.isClosed()) {
                 serverSocket.close();
+                threadPool.shutdown();
             }
         } catch (IOException e) {
             e.printStackTrace();

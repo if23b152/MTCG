@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited" />
+    <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/BattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/BattleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/BattleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/BattleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Database/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Database/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Battle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/HttpServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Router.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/main/Controller/BattleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/Controller/BattleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/main/Controller/CardControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/Controller/CardControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/main/Controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/Controller/UserControllerTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,61 +76,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main (1).executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainServerApp.executor": "Run",
-    "JUnit.All in MTCG.executor": "Run",
-    "JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid.executor": "Run",
-    "JUnit.CardControllerTest.testCreatePackageWithValidAdmin.executor": "Run",
-    "JUnit.CardControllerTest.testGetCardsForValidUser.executor": "Run",
-    "JUnit.CardControllerTest.testUserInitialStats.executor": "Run",
-    "JUnit.CardControllerTest.testUserProfileToJson.executor": "Run",
-    "JUnit.CardControllerTests.testConfigureDeckSuccess.executor": "Run",
-    "JUnit.MTCGTEST.testCreatePackageInvalidSize.executor": "Run",
-    "JUnit.MTCGTEST.testCreatePackageNotAdmin.executor": "Run",
-    "JUnit.MTCGTEST.testCreatePackageSuccess (1).executor": "Run",
-    "JUnit.MTCGTEST.testCreatePackageSuccess.executor": "Run",
-    "JUnit.MTCGTests.executor": "Run",
-    "JUnit.MTCGTests.testCreatePackageNotAdmin.executor": "Run",
-    "JUnit.MTCGTests.testCreatePackageSuccess.executor": "Run",
-    "JUnit.MTCGTests.testDeckCardRemoval.executor": "Run",
-    "JUnit.MTCGTests.testElementTypeFromCardName.executor": "Run",
-    "JUnit.MTCGTests.testUserCreation.executor": "Run",
-    "JUnit.MTCGtest in MTCG.executor": "Run",
-    "JUnit.java in MTCG.executor": "Run",
-    "JUnit.main.Controller in MTCG.executor": "Run",
-    "JUnit.test in MTCG.executor": "Run",
-    "JUnit.test-annotations in MTCG.executor": "Run",
-    "Maven.Unknown [install].executor": "Run",
-    "Maven.mtcg [clean].executor": "Run",
-    "Maven.mtcg [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/iboba/IdeaProjects/MTCG/target/generated-test-sources/test-annotations",
-    "last_opened_file_path": "C:/Users/iboba/IdeaProjects/MTCG/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainServerApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardControllerTest.testCreatePackageWithValidAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardControllerTest.testGetCardsForValidUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardControllerTest.testUserInitialStats.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardControllerTest.testUserProfileToJson.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardControllerTests.testConfigureDeckSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTEST.testCreatePackageInvalidSize.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTEST.testCreatePackageNotAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTEST.testCreatePackageSuccess (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTEST.testCreatePackageSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTests.testCreatePackageNotAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTests.testCreatePackageSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTests.testDeckCardRemoval.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTests.testElementTypeFromCardName.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGTests.testUserCreation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MTCGtest in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.main.Controller in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test-annotations in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mtcg [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mtcg [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/iboba/IdeaProjects/MTCG/target/generated-test-sources/test-annotations&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/iboba/IdeaProjects/MTCG/src/main/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\iboba\IdeaProjects\MTCG\src\main\Models" />
@@ -126,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTCG" />
       <extension name="coverage">
         <pattern>
@@ -135,8 +158,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="main.Controller" />
-      <option name="MAIN_CLASS_NAME" value="main.Controller.CardControllerTest" />
-      <option name="METHOD_NAME" value="createPackage_shouldReturn201WhenPackageIsValid" />
+      <option name="MAIN_CLASS_NAME" value="main.Controller.BattleTest" />
+      <option name="METHOD_NAME" value="calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MTCG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main.Controller" />
+      <option name="MAIN_CLASS_NAME" value="main.Controller.BattleTest" />
+      <option name="METHOD_NAME" value="getRandomCard_shouldThrowExceptionForEmptyDeck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,28 +213,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in MTCG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MTCG" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid" />
       <item itemvalue="JUnit.CardControllerTest.testUserInitialStats" />
       <item itemvalue="JUnit.CardControllerTest.testUserProfileToJson" />
-      <item itemvalue="JUnit.java in MTCG" />
+      <item itemvalue="JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" />
+      <item itemvalue="JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid" />
-        <item itemvalue="JUnit.java in MTCG" />
-        <item itemvalue="JUnit.CardControllerTest.testUserProfileToJson" />
         <item itemvalue="JUnit.CardControllerTest.testUserInitialStats" />
+        <item itemvalue="JUnit.CardControllerTest.testUserProfileToJson" />
+        <item itemvalue="JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" />
+        <item itemvalue="JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck" />
       </list>
     </recent_temporary>
   </component>
@@ -233,6 +264,9 @@
       <workItem from="1735830598210" duration="59246000" />
       <workItem from="1736178261910" duration="116000" />
       <workItem from="1736178381713" duration="7218000" />
+      <workItem from="1737244099757" duration="40420000" />
+      <workItem from="1738089338688" duration="20957000" />
+      <workItem from="1739825988625" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="ready to commit">
       <option name="closed" value="true" />

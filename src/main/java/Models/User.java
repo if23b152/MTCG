@@ -55,8 +55,6 @@ public class User {
 
 
     public void setName(String name) { this.name = name; }
-    public void setBio(String bio) { this.bio = bio; }
-    public void setImage(String image) { this.image = image; }
 
     public void setElo(int elo) {
         this.elo = Math.max(0, elo);

@@ -77,10 +77,6 @@ public class Battle {
 
 
 
-    private void logDeckSize() {
-        System.out.println(player1 + " deck size: " + deck1.size());
-        System.out.println(player2 + " deck size: " + deck2.size());
-    }
     private void logCardMovement(String action, MonsterCard card, String from, String to) {
         System.out.println(action + ": " + card.getName() + " (ID: " + card.getId() + ") moved from " + from + " to " + to);
     }
@@ -129,7 +125,7 @@ public class Battle {
             return;
         }
         if (rounds >= 100) {
-            battleLog.append("\nGame Over - Draw after 100 rounds\n");
+            battleLog.append("\nGame Over - Draw after 100 rounds\n"); //draw
         }
     }
 

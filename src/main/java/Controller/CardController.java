@@ -34,7 +34,7 @@ public class CardController {
             String adminUsername = extractUsernameFromToken(request.getHeaders().get("Authorization"));
 
             for (MonsterCard card : newPackage) {
-                cardRepository.save(card, adminUsername); // jede Karte speichern u
+                cardRepository.save(card, adminUsername); // jede Karte speichern
             }
 
 
