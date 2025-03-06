@@ -37,6 +37,7 @@ class UserControllerTest {
         assertEquals(200, response.getStatusCode());
         assertEquals("User login successful", response.getBody());
     }
+
     @Test
     void login_shouldReturn200WhenCredentialsAreCorrect2() throws Exception {
         String username = "altenhof";
@@ -53,10 +54,11 @@ class UserControllerTest {
         assertEquals("User login successful", response.getBody());
     }
 
+
     @Test
     void login_shouldReturn401WhenCredentialsAreIncorrect() throws Exception {
         String username = "kienboec";
-        String password = "wrongpassword";
+        String password = "wrongoassword";
         User mockUser = new User(username, "daniel");
         when(mockUserRepository.findByUsername(username)).thenReturn(mockUser);
 

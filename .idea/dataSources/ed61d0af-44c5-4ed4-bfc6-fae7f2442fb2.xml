@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1286</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4912</IntrospectionStateNumber>
       <ServerVersion>17.2</ServerVersion>
-      <StartupTime>1735833499</StartupTime>
+      <StartupTime>1739335511</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -800,7 +800,7 @@ false Zulu
 14751||10|C|G
 14751||-9223372036854775808|U|G
 14751||10|U|G</Grants>
-      <IntrospectionStateNumber>1286</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4912</IntrospectionStateNumber>
       <ObjectId>16387</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4227,8 +4227,8 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1286</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-01-06.15:25:19</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>4912</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-02-21.22:26:24</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4260,8 +4260,8 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="270" parent="265" name="trading_deals">
-      <ObjectId>16434</ObjectId>
-      <StateNumber>748</StateNumber>
+      <ObjectId>16464</ObjectId>
+      <StateNumber>4908</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4406,69 +4406,99 @@ card_id</ColNames>
     <column id="289" parent="270" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>748</StateNumber>
+      <StateNumber>4908</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
     <column id="290" parent="270" name="card_to_trade">
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>748</StateNumber>
+      <StateNumber>4908</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
-    <column id="291" parent="270" name="type">
+    <column id="291" parent="270" name="user_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>748</StateNumber>
-      <StoredType>varchar(50)|0s</StoredType>
+      <StateNumber>4908</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="292" parent="270" name="minimum_damage">
+    <column id="292" parent="270" name="type">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>748</StateNumber>
+      <StateNumber>4908</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="293" parent="270" name="minimum_damage">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>4908</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <foreign-key id="293" parent="270" name="trading_deals_card_to_trade_fkey">
+    <column id="294" parent="270" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>6</Position>
+      <StateNumber>4908</StateNumber>
+      <StoredType>timestamp|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="295" parent="270" name="acquired">
+      <DefaultExpression>false</DefaultExpression>
+      <Position>7</Position>
+      <StateNumber>4908</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <foreign-key id="296" parent="270" name="trading_deals_card_to_trade_fkey">
       <ColNames>card_to_trade</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16439</ObjectId>
-      <StateNumber>748</StateNumber>
+      <ObjectId>16478</ObjectId>
+      <StateNumber>4908</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16399</RefTableId>
     </foreign-key>
-    <index id="294" parent="270" name="trading_deals_pkey">
+    <foreign-key id="297" parent="270" name="trading_deals_user_id_fkey">
+      <ColNames>user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16473</ObjectId>
+      <StateNumber>4908</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16388</RefTableId>
+    </foreign-key>
+    <index id="298" parent="270" name="trading_deals_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16437</ObjectId>
+      <ObjectId>16471</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>748</StateNumber>
+      <StateNumber>4908</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="295" parent="270" name="trading_deals_pkey">
+    <key id="299" parent="270" name="trading_deals_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16438</ObjectId>
+      <ObjectId>16472</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>748</StateNumber>
-      <UnderlyingIndexId>16437</UnderlyingIndexId>
+      <StateNumber>4908</StateNumber>
+      <UnderlyingIndexId>16471</UnderlyingIndexId>
     </key>
-    <column id="296" parent="271" name="user_id">
+    <column id="300" parent="271" name="user_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>748</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="271" name="card_id">
+    <column id="301" parent="271" name="card_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>748</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
-    <foreign-key id="298" parent="271" name="user_cards_user_id_fkey">
+    <foreign-key id="302" parent="271" name="user_cards_user_id_fkey">
       <ColNames>user_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16409</ObjectId>
@@ -4476,7 +4506,7 @@ card_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16388</RefTableId>
     </foreign-key>
-    <foreign-key id="299" parent="271" name="user_cards_card_id_fkey">
+    <foreign-key id="303" parent="271" name="user_cards_card_id_fkey">
       <ColNames>card_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16414</ObjectId>
@@ -4484,7 +4514,7 @@ card_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16399</RefTableId>
     </foreign-key>
-    <index id="300" parent="271" name="user_cards_pkey">
+    <index id="304" parent="271" name="user_cards_pkey">
       <ColNames>user_id
 card_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -4497,74 +4527,74 @@ card_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="301" parent="271" name="user_cards_pkey">
+    <key id="305" parent="271" name="user_cards_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16408</ObjectId>
       <Primary>1</Primary>
       <StateNumber>748</StateNumber>
       <UnderlyingIndexId>16407</UnderlyingIndexId>
     </key>
-    <column id="302" parent="272" name="username">
+    <column id="306" parent="272" name="username">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>748</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="303" parent="272" name="password">
+    <column id="307" parent="272" name="password">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>748</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="304" parent="272" name="coins">
+    <column id="308" parent="272" name="coins">
       <DefaultExpression>20</DefaultExpression>
       <Position>3</Position>
       <StateNumber>748</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="305" parent="272" name="name">
+    <column id="309" parent="272" name="name">
       <Position>4</Position>
       <StateNumber>748</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="306" parent="272" name="bio">
+    <column id="310" parent="272" name="bio">
       <Position>5</Position>
       <StateNumber>748</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="307" parent="272" name="image">
+    <column id="311" parent="272" name="image">
       <Position>6</Position>
       <StateNumber>748</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="308" parent="272" name="elo">
+    <column id="312" parent="272" name="elo">
       <DefaultExpression>100</DefaultExpression>
       <Position>7</Position>
       <StateNumber>748</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="309" parent="272" name="wins">
+    <column id="313" parent="272" name="wins">
       <DefaultExpression>0</DefaultExpression>
       <Position>8</Position>
       <StateNumber>748</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="310" parent="272" name="losses">
+    <column id="314" parent="272" name="losses">
       <DefaultExpression>0</DefaultExpression>
       <Position>9</Position>
       <StateNumber>748</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <index id="311" parent="272" name="users_pkey">
+    <index id="315" parent="272" name="users_pkey">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16397</ObjectId>
@@ -4576,7 +4606,7 @@ card_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="312" parent="272" name="users_pkey">
+    <key id="316" parent="272" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16398</ObjectId>
       <Primary>1</Primary>

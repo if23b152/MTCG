@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2/storage_v2/_src_/database/mtcg.S0wzAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2/storage_v2/_src_/database/mtcg.S0wzAA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/BattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/BattleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/StatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/StatsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/TradingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/TradingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/MonsterCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/MonsterCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/BattleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/BattleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Database/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Database/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Battle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Deck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/HttpServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Router.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/main/Controller/BattleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/Controller/BattleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/main/Controller/CardControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/Controller/CardControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/RouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/RouterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/main/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/Controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/StatsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/StatsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/TradingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/TradingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Database/CardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Database/CardRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/MonsterCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/MonsterCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/RouterConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/RouterConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/main/Controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/Controller/UserControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,9 +79,13 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainServerApp.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.All in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BattleTest.applyBooster_shouldIncreaseCardDamage.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BattleTest.executeBattle_shouldDetermineWinner.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BattleTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardControllerTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CardControllerTest.testCreatePackageWithValidAdmin.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CardControllerTest.testGetCardsForValidUser.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CardControllerTest.testUserInitialStats.executor&quot;: &quot;Run&quot;,
@@ -101,6 +102,8 @@
     &quot;JUnit.MTCGTests.testElementTypeFromCardName.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.MTCGTests.testUserCreation.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.MTCGtest in MTCG.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.login_shouldReturn401WhenCredentialsAreIncorrect.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.java in MTCG.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.main.Controller in MTCG.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.test in MTCG.executor&quot;: &quot;Run&quot;,
@@ -142,14 +145,14 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MTCG" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BattleTest.applyBooster_shouldIncreaseCardDamage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTCG" />
       <extension name="coverage">
         <pattern>
@@ -159,13 +162,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="main.Controller" />
       <option name="MAIN_CLASS_NAME" value="main.Controller.BattleTest" />
-      <option name="METHOD_NAME" value="calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" />
+      <option name="METHOD_NAME" value="applyBooster_shouldIncreaseCardDamage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BattleTest.executeBattle_shouldDetermineWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTCG" />
       <extension name="coverage">
         <pattern>
@@ -175,13 +178,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="main.Controller" />
       <option name="MAIN_CLASS_NAME" value="main.Controller.BattleTest" />
-      <option name="METHOD_NAME" value="getRandomCard_shouldThrowExceptionForEmptyDeck" />
+      <option name="METHOD_NAME" value="executeBattle_shouldDetermineWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardControllerTest.testUserInitialStats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTCG" />
       <extension name="coverage">
         <pattern>
@@ -190,14 +193,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="main.Controller" />
-      <option name="MAIN_CLASS_NAME" value="main.Controller.CardControllerTest" />
-      <option name="METHOD_NAME" value="testUserInitialStats" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="main.Controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardControllerTest.testUserProfileToJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.login_shouldReturn401WhenCredentialsAreIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTCG" />
       <extension name="coverage">
         <pattern>
@@ -206,8 +208,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="main.Controller" />
-      <option name="MAIN_CLASS_NAME" value="main.Controller.CardControllerTest" />
-      <option name="METHOD_NAME" value="testUserProfileToJson" />
+      <option name="MAIN_CLASS_NAME" value="main.Controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="login_shouldReturn401WhenCredentialsAreIncorrect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,18 +217,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.CardControllerTest.testUserInitialStats" />
-      <item itemvalue="JUnit.CardControllerTest.testUserProfileToJson" />
-      <item itemvalue="JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" />
-      <item itemvalue="JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck" />
+      <item itemvalue="JUnit.BattleTest.applyBooster_shouldIncreaseCardDamage" />
+      <item itemvalue="JUnit.BattleTest.executeBattle_shouldDetermineWinner" />
+      <item itemvalue="JUnit.UserControllerTest" />
+      <item itemvalue="JUnit.UserControllerTest.login_shouldReturn401WhenCredentialsAreIncorrect" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BattleTest.applyBooster_shouldIncreaseCardDamage" />
+        <item itemvalue="JUnit.BattleTest.executeBattle_shouldDetermineWinner" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CardControllerTest.testUserInitialStats" />
-        <item itemvalue="JUnit.CardControllerTest.testUserProfileToJson" />
-        <item itemvalue="JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon" />
-        <item itemvalue="JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck" />
+        <item itemvalue="JUnit.UserControllerTest.login_shouldReturn401WhenCredentialsAreIncorrect" />
+        <item itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +268,9 @@
       <workItem from="1736178381713" duration="7218000" />
       <workItem from="1737244099757" duration="40420000" />
       <workItem from="1738089338688" duration="20957000" />
-      <workItem from="1739825988625" duration="1848000" />
+      <workItem from="1739825988625" duration="69416000" />
+      <workItem from="1740955136800" duration="3654000" />
+      <workItem from="1741219751729" duration="2281000" />
     </task>
     <task id="LOCAL-00001" summary="ready to commit">
       <option name="closed" value="true" />
@@ -300,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736184352177</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commited">
+      <option name="closed" value="true" />
+      <created>1739831367416</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739831367416</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -10,11 +10,9 @@ import java.util.List;
 import java.util.Map;
 
 public class StatsController {
-    private final Map<String, User> users;
     private final UserRepository userRepository;
 
     public StatsController(Map<String, User> users) {
-        this.users = users;
         this.userRepository = new UserRepository();
     }
 

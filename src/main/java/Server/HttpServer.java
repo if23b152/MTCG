@@ -19,15 +19,15 @@ public class HttpServer {
         this.serverSocket = new ServerSocket(port);
         this.router = new Router();
         new RouterConfig(router);
-        this.threadPool = Executors.newFixedThreadPool(10); // 10 gleichzeitige Threads
+        this.threadPool = Executors.newFixedThreadPool(10); // 10 gleichzeitige threds
     }
 
     public void start() {
         System.out.println("Server started on port " + port);
         while (true) {
             try {
-                Socket clientSocket = serverSocket.accept();
-                threadPool.execute(() -> handleClient(clientSocket)); // Multithreading aktiv
+                Socket clientSocket = serverSocket.accept(); //waartet auf clients
+                threadPool.execute(() -> handleClient(clientSocket)); // multithreading aktiv
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -132,7 +132,7 @@ public class Battle {
     public void applyBooster(MonsterCard card) {
         double originalDamage = card.getDamage();
         card.setDamage(originalDamage * 1.5);  // Booster erhöht den Schaden um 50%
-        battleLog.append("Booster applied to ").append(card.getName())
+        battleLog.append("Booster applied to ").append(card.getName()) //jeder bekommt bei einer karte in seinem deck eine geboostete karte
                 .append(" (New Damage: ").append(card.getDamage()).append(")\n");
     }
 

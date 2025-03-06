@@ -41,6 +41,13 @@ public class MonsterCard {
         return elementType;
     }
 
+    public String getType() {
+        if (name.toLowerCase().contains("spell")) {
+            return "spell";
+        }
+        return "monster";
+    }
+
     // Setter-Methode für den Schaden
     public void setDamage(double damage) {
         if (damage < 0) {
