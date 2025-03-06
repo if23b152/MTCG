@@ -94,12 +94,12 @@ public class RouterConfig {
     private String extractPathParameter(String path, String paramName) {
         String[] parts = path.split("/");
 
-        // valide Route
+        // Stelle sicher, dass wir eine valide Route haben
         if (parts.length < 3) {
             return "";
         }
 
-        // Extrahiere parameter Wert je nach anfrage
+        // Extrahiere den Parameter-Wert je nach Anfrage
         if (paramName.equals("username") && parts.length > 2) {
             return parts[2].replaceAll("/", ""); // /users/{username}
         } else if (paramName.equals("tradingdealid") && parts.length > 2) {

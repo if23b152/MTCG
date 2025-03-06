@@ -7,7 +7,7 @@ import Models.TradingDeal;
 import Server.DatabaseConnection;
 import Server.Request;
 import Server.Response;
-//import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class TradingController {
-   // private final Map<String, TradingDeal> tradingDeals = new HashMap<>();
+    private final Map<String, TradingDeal> tradingDeals = new HashMap<>();
     private final CardController cardController;
     private final CardRepository cardRepository;
     private final TradingRepository tradingRepository;
@@ -31,15 +31,15 @@ public class TradingController {
 
     public Response getTradingDeals(Request request) {
         try {
-            List<TradingDeal> tradingDeals = tradingRepository.getAllTradingDeals(); // trading- Deals aus DB abrufen
+            List<TradingDeal> tradingDeals = tradingRepository.getAllTradingDeals(); // Trading-Deals aus DB abrufen
 
             if (tradingDeals.isEmpty()) {
-                return new Response(204, "No trading deals available"); // keine Deals vorhanden
+                return new Response(204, "No trading deals available"); // Keine Deals vorhanden
             }
 
-            return new Response(200, tradingDealsToJson(tradingDeals)); // deals als JSON zurückgeben
+            return new Response(200, tradingDealsToJson(tradingDeals)); // Deals als JSON zurückgeben
         } catch (SQLException e) {
-            return new Response(500, "Database error: " + e.getMessage()); // datenbankfehler behandeln
+            return new Response(500, "Database error: " + e.getMessage()); // Datenbankfehler behandeln
         }
     }
 
@@ -153,18 +153,18 @@ public class TradingController {
 
             String deleteOldOwnersQuery = "DELETE FROM user_cards WHERE card_id IN (?, ?)";
             try (PreparedStatement deleteStmt = connection.prepareStatement(deleteOldOwnersQuery)) {
-                deleteStmt.setObject(1, deal.getCardToTrade()); // alte Trading karte
-                deleteStmt.setObject(2, UUID.fromString(offeredCardId)); // angebotene krte
+                deleteStmt.setObject(1, deal.getCardToTrade()); // Alte Trading-Karte
+                deleteStmt.setObject(2, UUID.fromString(offeredCardId)); // Angebotene Karte
                 deleteStmt.executeUpdate();
             }
 
             // *2. Füge neue Besitzer in user_cards ein*
             String insertNewOwnersQuery = "INSERT INTO user_cards (user_id, card_id) VALUES (?, ?), (?, ?)";
             try (PreparedStatement insertStmt = connection.prepareStatement(insertNewOwnersQuery)) {
-                insertStmt.setString(1, username); // neuer besitzer für die alte trading-Karte
+                insertStmt.setString(1, username); // Neuer Besitzer für die alte Trading-Karte
                 insertStmt.setObject(2, deal.getCardToTrade());
 
-                insertStmt.setString(3, owner); // alter besitzer bekommt die angebotene Karte
+                insertStmt.setString(3, owner); // Alter Besitzer bekommt die angebotene Karte
                 insertStmt.setObject(4, UUID.fromString(offeredCardId));
 
                 insertStmt.executeUpdate();
@@ -183,7 +183,7 @@ public class TradingController {
         } catch (SQLException e) {
             if (connection != null) {
                 try {
-                    connection.rollback(); // falls fehler alles rückgängig machen
+                    connection.rollback(); // ❌ Falls ein Fehler passiert, alles rückgängig machen
                 } catch (SQLException rollbackError) {
                     return new Response(500, "Rollback failed: " + rollbackError.getMessage());
                 }
@@ -192,7 +192,7 @@ public class TradingController {
         } finally {
             if (connection != null) {
                 try {
-                    connection.setAutoCommit(true); // autoCommit wieder aktiv
+                    connection.setAutoCommit(true); // ❌ Sicherstellen, dass AutoCommit wieder aktiv ist
                 } catch (SQLException ignored) {
                 }
             }
@@ -209,7 +209,7 @@ public class TradingController {
 
     private String extractUsername(String token) {
         if (token != null && token.startsWith("Bearer ")) {
-            return token.substring(7).split("-")[0]; // bnutzername extrahiert wird
+            return token.substring(7).split("-")[0]; // ✅ Stellt sicher, dass nur der Benutzername extrahiert wird
         }
         return "";
     }

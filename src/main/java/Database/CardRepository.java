@@ -37,7 +37,7 @@ public class CardRepository {
     public boolean hasEnoughMoney(String username, int cost) throws SQLException {
         String query = "SELECT coins FROM users WHERE username = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, username);      //set strin platzhalter -> kein command mehr sondern string
+            statement.setString(1, username);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     return resultSet.getInt("coins") >= cost;
@@ -140,22 +140,22 @@ public class CardRepository {
 
                 try (ResultSet rs = stmt.executeQuery()) {
                     if (rs.next()) {
-                        return rs.getInt(1) > 0; // wenn COUNT > 0 → Karte ist im Deck
+                        return rs.getInt(1) > 0; // Wenn COUNT > 0 → Karte ist im Deck
                     }
                 }
             }
         } catch (SQLException e) {
             System.err.println("Database error in isCardInDeck: " + e.getMessage());
         }
-        return false; // falls die karte nicht gefunden wird, ist sie nicht im Deck
+        return false; // Falls die Karte nicht gefunden wird, ist sie nicht im Deck
     }
     public String getCardOwner(UUID cardId) {
-        System.out.println("DEBUG: getCardOwner called with cardId = " + cardId);
+        System.out.println("DEBUG: getCardOwner called with cardId = " + cardId); // 🚀 Debugging-Ausgabe
 
         try {
-            String query = "SELECT user_id FROM user_cards WHERE card_id = ?"; //platzhalter -> ?
+            String query = "SELECT user_id FROM user_cards WHERE card_id = ?";
             try (PreparedStatement stmt = connection.prepareStatement(query)) {
-                stmt.setObject(1, cardId, java.sql.Types.OTHER); // Direkt als UUID setzen!
+                stmt.setObject(1, cardId, java.sql.Types.OTHER); // ✅ Direkt als UUID setzen!
                 System.out.println("DEBUG: SQL Query -> " + query);
                 System.out.println("DEBUG: Using UUID -> " + cardId);
 
@@ -164,7 +164,7 @@ public class CardRepository {
                         System.out.println("DEBUG: Found owner -> " + rs.getString("user_id"));
                         return rs.getString("user_id");
                     } else {
-                        System.err.println(" No owner found for cardId: " + cardId);
+                        System.err.println("❌ No owner found for cardId: " + cardId);
                     }
                 }
             }
@@ -181,11 +181,11 @@ public class CardRepository {
         String query = "SELECT COUNT(*) FROM user_cards WHERE user_id = ? AND card_id = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, username);
-            statement.setObject(2, cardId, java.sql.Types.OTHER); //  UUID-Verarbeitung
+            statement.setObject(2, cardId, java.sql.Types.OTHER); // ✅ Korrekte UUID-Verarbeitung
 
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return resultSet.getInt(1) > 0; // falls COUNT > 0, besitzt der User die Karte
+                    return resultSet.getInt(1) > 0; // Falls COUNT > 0, besitzt der User die Karte
                 }
             }
         }
