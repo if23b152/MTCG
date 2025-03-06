@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="747adad2-b134-4133-849e-1e90360a704e" name="Changes" comment="commited">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2/storage_v2/_src_/database/mtcg.S0wzAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed61d0af-44c5-4ed4-bfc6-fae7f2442fb2/storage_v2/_src_/database/mtcg.S0wzAA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/StatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/StatsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/TradingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/TradingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/CardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/MonsterCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/MonsterCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/HttpServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/RouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/RouterConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/main/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/Controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/StatsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/StatsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/TradingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/TradingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Database/CardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Database/CardRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/MonsterCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/MonsterCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/RouterConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/RouterConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/main/Controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/Controller/UserControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -64,6 +54,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -73,69 +66,69 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainServerApp.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in MTCG.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BattleTest.applyBooster_shouldIncreaseCardDamage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BattleTest.executeBattle_shouldDetermineWinner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BattleTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardControllerTest.testCreatePackageWithValidAdmin.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardControllerTest.testGetCardsForValidUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardControllerTest.testUserInitialStats.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardControllerTest.testUserProfileToJson.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardControllerTests.testConfigureDeckSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTEST.testCreatePackageInvalidSize.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTEST.testCreatePackageNotAdmin.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTEST.testCreatePackageSuccess (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTEST.testCreatePackageSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTests.testCreatePackageNotAdmin.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTests.testCreatePackageSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTests.testDeckCardRemoval.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTests.testElementTypeFromCardName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGTests.testUserCreation.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MTCGtest in MTCG.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.login_shouldReturn401WhenCredentialsAreIncorrect.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.java in MTCG.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.main.Controller in MTCG.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test in MTCG.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test-annotations in MTCG.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Unknown [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mtcg [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mtcg [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/iboba/IdeaProjects/MTCG/target/generated-test-sources/test-annotations&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/iboba/IdeaProjects/MTCG/src/main/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (1).executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainServerApp.executor": "Run",
+    "JUnit.All in MTCG.executor": "Run",
+    "JUnit.BattleTest.applyBooster_shouldIncreaseCardDamage.executor": "Run",
+    "JUnit.BattleTest.calculateEffectiveDamage_shouldHandleSpecialCaseGoblinVsDragon.executor": "Run",
+    "JUnit.BattleTest.executeBattle_shouldDetermineWinner.executor": "Run",
+    "JUnit.BattleTest.executor": "Run",
+    "JUnit.BattleTest.getRandomCard_shouldThrowExceptionForEmptyDeck.executor": "Run",
+    "JUnit.CardControllerTest.createPackage_shouldReturn201WhenPackageIsValid.executor": "Run",
+    "JUnit.CardControllerTest.executor": "Run",
+    "JUnit.CardControllerTest.testCreatePackageWithValidAdmin.executor": "Run",
+    "JUnit.CardControllerTest.testGetCardsForValidUser.executor": "Run",
+    "JUnit.CardControllerTest.testUserInitialStats.executor": "Run",
+    "JUnit.CardControllerTest.testUserProfileToJson.executor": "Run",
+    "JUnit.CardControllerTests.testConfigureDeckSuccess.executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageInvalidSize.executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageNotAdmin.executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageSuccess (1).executor": "Run",
+    "JUnit.MTCGTEST.testCreatePackageSuccess.executor": "Run",
+    "JUnit.MTCGTests.executor": "Run",
+    "JUnit.MTCGTests.testCreatePackageNotAdmin.executor": "Run",
+    "JUnit.MTCGTests.testCreatePackageSuccess.executor": "Run",
+    "JUnit.MTCGTests.testDeckCardRemoval.executor": "Run",
+    "JUnit.MTCGTests.testElementTypeFromCardName.executor": "Run",
+    "JUnit.MTCGTests.testUserCreation.executor": "Run",
+    "JUnit.MTCGtest in MTCG.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserControllerTest.login_shouldReturn401WhenCredentialsAreIncorrect.executor": "Run",
+    "JUnit.java in MTCG.executor": "Run",
+    "JUnit.main.Controller in MTCG.executor": "Run",
+    "JUnit.test in MTCG.executor": "Run",
+    "JUnit.test-annotations in MTCG.executor": "Run",
+    "Maven.Unknown [install].executor": "Run",
+    "Maven.mtcg [clean].executor": "Run",
+    "Maven.mtcg [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "SQL Inserts",
+    "git-widget-placeholder": "test",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/iboba/IdeaProjects/MTCG/target/generated-test-sources/test-annotations",
+    "last_opened_file_path": "C:/Users/iboba/IdeaProjects/MTCG/src/main/java/Database",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "SQL Dialects",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\iboba\IdeaProjects\MTCG\src\main\Models" />
@@ -224,9 +217,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BattleTest.applyBooster_shouldIncreaseCardDamage" />
         <item itemvalue="JUnit.BattleTest.executeBattle_shouldDetermineWinner" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.UserControllerTest.login_shouldReturn401WhenCredentialsAreIncorrect" />
         <item itemvalue="JUnit.UserControllerTest" />
       </list>
@@ -312,13 +305,34 @@
       <option name="project" value="LOCAL" />
       <updated>1739831367416</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commited">
+      <option name="closed" value="true" />
+      <created>1741223051102</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741223051102</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commited">
+      <option name="closed" value="true" />
+      <created>1741223507723</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741223507723</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="e88baab6-1d9b-4187-8537-69371232e7a9" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -360,7 +374,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -376,6 +390,11 @@
             </State>
           </value>
         </entry>
+        <entry key="e88baab6-1d9b-4187-8537-69371232e7a9">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
@@ -383,5 +402,9 @@
     <MESSAGE value="ready to commit" />
     <MESSAGE value="commited" />
     <option name="LAST_COMMIT_MESSAGE" value="commited" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
