@@ -31,7 +31,8 @@ public class StatsController {
                     user.getName(), user.getElo(), user.getWins(), user.getLosses());
             return new Response(200, stats);
         } catch (SQLException e) {
-            return new Response(500, "Error retrieving user stats: " + e.getMessage());
+            System.err.println("Error retrieving user stats: " + e.getMessage());
+            return new Response(500, "Error retrieving user stats");
         }
     }
 
@@ -53,7 +54,8 @@ public class StatsController {
 
             return new Response(200, scoreboard.toString());
         } catch (SQLException e) {
-            return new Response(500, "Error retrieving scoreboard: " + e.getMessage());
+            System.err.println("Error retrieving scoreboard: " + e.getMessage());
+            return new Response(500, "Error retrieving scoreboard");
         }
     }
 

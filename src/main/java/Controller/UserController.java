@@ -6,6 +6,8 @@ import Server.Request;
 import Server.Response;
 import Models.User;
 import Database.UserRepository;
+import Server.AuthToken;
+import Server.PasswordHasher;
 import java.util.HashMap;
 import java.util.Map;
 import java.sql.SQLException;
@@ -24,21 +26,31 @@ public class UserController {
             String username = extractValue(body, "Username");
             String password = extractValue(body, "Password");
 
-            if (username == null || password == null) {
+            if (username == null || password == null || username.isBlank() || password.isEmpty()) {
                 return new Response(400, "Username and password are required");
+            }
+
+            // Same username rules as the token format (letters, digits, '_' and '.')
+            if (username.length() > 64 || !username.matches("[A-Za-z0-9_.]+") || password.length() > 128) {
+                return new Response(400, "Invalid username or password format");
             }
 
             if (users.containsKey(username)) {
                 return new Response(409, "User already registered");
             }
 
-            User newUser = new User(username, password);
+            // Never store plaintext passwords
+            User newUser = new User(username, PasswordHasher.hash(password));
             try {
                 userRepository.save(newUser);
                 users.put(username, newUser);
                 return new Response(201, "User created successfully");
             } catch (SQLException e) {
-                return new Response(500, "Error creating user: " + e.getMessage());
+                if ("23505".equals(e.getSQLState())) { // unique_violation
+                    return new Response(409, "User already registered");
+                }
+                System.err.println("Error creating user: " + e.getMessage());
+                return new Response(500, "Error creating user");
             }
         } catch (Exception e) {
             return new Response(400, "Invalid request");
@@ -51,15 +63,24 @@ public class UserController {
             String username = extractValue(body, "Username");
             String password = extractValue(body, "Password");
 
+            if (username == null || password == null) {
+                return new Response(401, "Login failed");
+            }
+
             try {
                 User user = userRepository.findByUsername(username);
-                if (user != null && user.getPassword().equals(password)) {
+                if (user != null && PasswordHasher.verify(password, user.getPassword())) {
+                    // Upgrade legacy plaintext passwords to a hash on successful login
+                    if (!PasswordHasher.isHashed(user.getPassword())) {
+                        userRepository.updatePassword(username, PasswordHasher.hash(password));
+                    }
                     return new Response(200, "User login successful");
                 } else {
                     return new Response(401, "Login failed");
                 }
             } catch (SQLException e) {
-                return new Response(500, "Error during login: " + e.getMessage());
+                System.err.println("Error during login: " + e.getMessage());
+                return new Response(500, "Error during login");
             }
         } catch (Exception e) {
             return new Response(400, "Invalid request");
@@ -92,7 +113,8 @@ public class UserController {
             }
             return new Response(200, user.toJson());
         } catch (SQLException e) {
-            return new Response(500, "Error retrieving user data: " + e.getMessage());
+            System.err.println("Error retrieving user data: " + e.getMessage());
+            return new Response(500, "Error retrieving user data");
         }
     }
 
@@ -119,7 +141,8 @@ public class UserController {
             userRepository.update(user);
             return new Response(200, "User successfully updated");
         } catch (SQLException e) {
-            return new Response(500, "Error updating user: " + e.getMessage());
+            System.err.println("Error updating user: " + e.getMessage());
+            return new Response(500, "Error updating user");
         } catch (Exception e) {
             return new Response(400, "Invalid request");
         }
@@ -127,13 +150,9 @@ public class UserController {
 
     private boolean isAuthorized(String username, String token) {
 
-        if (token == null || !token.startsWith("Bearer ")) {
-            return false;
-        }
-        String expectedToken = "Bearer " + username + "-mtcgToken";
-        boolean result = token.equals(expectedToken);
-
-        return result;
+        // Users may only access/modify their own profile
+        String tokenUser = AuthToken.usernameFrom(token);
+        return tokenUser != null && tokenUser.equals(username);
     }
 
 }

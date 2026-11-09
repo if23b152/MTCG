@@ -6,9 +6,9 @@ services:
     environment:
       - POSTGRES_DB=mtcg
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=0000
+      - POSTGRES_PASSWORD=${MTCG_DB_PASSWORD:-0000}
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"   # only reachable from this machine
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - postgres_data:/var/lib/postgresql/data

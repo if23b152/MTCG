@@ -15,6 +15,11 @@ public class HttpServer {
     private final Router router;
     private final ExecutorService threadPool;
 
+    // Limits against oversized / slow requests (DoS)
+    private static final int MAX_BODY_CHARS = 1_000_000;
+    private static final int MAX_HEADERS = 100;
+    private static final int SOCKET_TIMEOUT_MS = 10_000;
+
     public HttpServer() throws IOException {
         this.serverSocket = new ServerSocket(port);
         this.router = new Router();
@@ -35,11 +40,21 @@ public class HttpServer {
     }
 
     private void handleClient(Socket clientSocket) {
+        try {
+            clientSocket.setSoTimeout(SOCKET_TIMEOUT_MS);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
              PrintWriter writer = new PrintWriter(clientSocket.getOutputStream(), true)) {
 
-            Request request = parseRequest(reader);
-            Response response = processRequest(request);
+            Response response;
+            try {
+                Request request = parseRequest(reader);
+                response = processRequest(request);
+            } catch (IllegalArgumentException e) {
+                response = new Response(400, "Bad Request");
+            }
 
             writer.write(response.toString());
             writer.flush();
@@ -72,7 +87,11 @@ public class HttpServer {
         }
 
         String headerLine;
+        int headerCount = 0;
         while ((headerLine = reader.readLine()) != null && !headerLine.isEmpty()) {
+            if (++headerCount > MAX_HEADERS) {
+                throw new IllegalArgumentException("Too many headers");
+            }
             String[] headerParts = headerLine.split(": ", 2);
             if (headerParts.length == 2) {
                 request.getHeaders().put(headerParts[0], headerParts[1]);
@@ -80,10 +99,26 @@ public class HttpServer {
         }
 
         if (request.getHeaders().containsKey("Content-Length")) {
-            int contentLength = Integer.parseInt(request.getHeaders().get("Content-Length"));
+            int contentLength;
+            try {
+                contentLength = Integer.parseInt(request.getHeaders().get("Content-Length").trim());
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Invalid Content-Length");
+            }
+            // Reject negative or huge values (previously: allocation of arbitrary size -> OOM)
+            if (contentLength < 0 || contentLength > MAX_BODY_CHARS) {
+                throw new IllegalArgumentException("Invalid Content-Length");
+            }
             char[] bodyChars = new char[contentLength];
-            reader.read(bodyChars, 0, contentLength);
-            request.setBody(new String(bodyChars));
+            int read = 0;
+            while (read < contentLength) {
+                int n = reader.read(bodyChars, read, contentLength - read);
+                if (n == -1) {
+                    break;
+                }
+                read += n;
+            }
+            request.setBody(new String(bodyChars, 0, read));
         }
 
         return request;

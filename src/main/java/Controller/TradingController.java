@@ -39,7 +39,8 @@ public class TradingController {
 
             return new Response(200, tradingDealsToJson(tradingDeals)); // Deals als JSON zurückgeben
         } catch (SQLException e) {
-            return new Response(500, "Database error: " + e.getMessage()); // Datenbankfehler behandeln
+            System.err.println("Database error: " + e.getMessage());
+            return new Response(500, "Database error"); // Datenbankfehler behandeln
         }
     }
 
@@ -76,6 +77,9 @@ public class TradingController {
     public Response createTradingDeal(Request request) {
         String token = request.getHeaders().get("Authorization");
         String username = extractUsername(token);
+        if (username.isEmpty()) {
+            return new Response(401, "Access token is missing or invalid");
+        }
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             JsonNode jsonNode = objectMapper.readTree(request.getBody());
@@ -93,7 +97,8 @@ public class TradingController {
         } catch (IllegalArgumentException e) {
             return new Response(400, "Invalid card ID format");
         } catch (SQLException e) {
-            return new Response(500, "Database error: " + e.getMessage());
+            System.err.println("Database error: " + e.getMessage());
+            return new Response(500, "Database error");
         } catch (Exception e) {
             return new Response(400, "Invalid request");
         }
@@ -104,6 +109,9 @@ public class TradingController {
     public Response deleteTradingDeal(Request request, String dealId) {
         String token = request.getHeaders().get("Authorization");
         String username = extractUsername(token);
+        if (username.isEmpty()) {
+            return new Response(401, "Access token is missing or invalid");
+        }
 
         try {
             TradingDeal deal = tradingRepository.getTradingDealById(UUID.fromString(dealId));
@@ -119,7 +127,8 @@ public class TradingController {
             tradingRepository.deleteTradingDeal(UUID.fromString(dealId));
             return new Response(200, "Trading deal successfully deleted");
         } catch (SQLException e) {
-            return new Response(500, "Database error: " + e.getMessage());
+            System.err.println("Database error: " + e.getMessage());
+            return new Response(500, "Database error");
         }
     }
 
@@ -127,6 +136,9 @@ public class TradingController {
     public Response trade(Request request, String tradingDealId) {
         String token = request.getHeaders().get("Authorization");
         String username = extractUsername(token);
+        if (username.isEmpty()) {
+            return new Response(401, "Access token is missing or invalid");
+        }
         System.out.println("DEBUG: TradingDealId = " + tradingDealId);
         System.out.println("DEBUG: Username = " + username);
         Connection connection = null;
@@ -185,10 +197,12 @@ public class TradingController {
                 try {
                     connection.rollback(); // ❌ Falls ein Fehler passiert, alles rückgängig machen
                 } catch (SQLException rollbackError) {
-                    return new Response(500, "Rollback failed: " + rollbackError.getMessage());
+                    System.err.println("Rollback failed: " + rollbackError.getMessage());
+                    return new Response(500, "Rollback failed");
                 }
             }
-            return new Response(500, "Trade failed: " + e.getMessage());
+            System.err.println("Trade failed: " + e.getMessage());
+            return new Response(500, "Trade failed");
         } finally {
             if (connection != null) {
                 try {
@@ -208,10 +222,9 @@ public class TradingController {
 
 
     private String extractUsername(String token) {
-        if (token != null && token.startsWith("Bearer ")) {
-            return token.substring(7).split("-")[0]; // ✅ Stellt sicher, dass nur der Benutzername extrahiert wird
-        }
-        return "";
+        // Strict token check: only "Bearer <username>-mtcgToken" is accepted
+        String username = Server.AuthToken.usernameFrom(token);
+        return username != null ? username : "";
     }
 
 

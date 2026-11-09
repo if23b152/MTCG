@@ -82,6 +82,15 @@ public class UserRepository {
         }
     }
 
+    public void updatePassword(String username, String passwordHash) throws SQLException {
+        String query = "UPDATE users SET password = ? WHERE username = ?";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, passwordHash);
+            statement.setString(2, username);
+            statement.executeUpdate();
+        }
+    }
+
     public List<User> getAllUsers() throws SQLException {
         String query = "SELECT * FROM users ORDER BY elo DESC";
         List<User> users = new ArrayList<>();

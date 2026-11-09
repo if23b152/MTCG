@@ -27,7 +27,6 @@ public class BattleController {
 
     public Response startBattle(Request request) {
         String token = request.getHeaders().get("Authorization");
-        System.out.println("Received token: " + token);
 
         String username = extractUsername(token);
         System.out.println("Extracted username: " + username);

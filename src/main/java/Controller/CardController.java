@@ -47,16 +47,12 @@ public class CardController {
 
 
     private String extractUsernameFromToken(String authorizationHeader) {
-        if (authorizationHeader == null || !authorizationHeader.startsWith("Bearer ")) {
-            throw new UnauthorizedException("Authorization header must start with 'Bearer '");
+        // Strict check of the full token format (previously "Bearer <anyone>-<anything>" was accepted)
+        String username = Server.AuthToken.usernameFrom(authorizationHeader);
+        if (username == null) {
+            throw new UnauthorizedException("Access token is missing or invalid");
         }
-
-        String token = authorizationHeader.substring(7);
-        if (!token.contains("-")) {
-            throw new UnauthorizedException("Token is missing a '-' separator");
-        }
-
-        return token.split("-")[0];
+        return username;
     }
 
     public class UnauthorizedException extends RuntimeException {
@@ -89,10 +85,12 @@ public class CardController {
             return new Response(403, e.getMessage()); // Nicht genug geld
         } catch (SQLException e) {
             e.printStackTrace();
-            return new Response(500, "Database error: " + e.getMessage());
+            System.err.println("Database error: " + e.getMessage());
+            return new Response(500, "Database error");
         } catch (Exception e) {
             e.printStackTrace();
-            return new Response(500, "Internal server error: " + e.getMessage());
+            System.err.println("Internal server error: " + e.getMessage());
+            return new Response(500, "Internal server error");
         }
     }
 
@@ -121,7 +119,8 @@ public class CardController {
             return new Response(401, e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
-            return new Response(500, "Internal server error: " + e.getMessage());
+            System.err.println("Internal server error: " + e.getMessage());
+            return new Response(500, "Internal server error");
         }
     }
 
@@ -149,7 +148,8 @@ public class CardController {
             return new Response(401, e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
-            return new Response(500, "Internal server error: " + e.getMessage());
+            System.err.println("Internal server error: " + e.getMessage());
+            return new Response(500, "Internal server error");
         }
     }
 
@@ -185,10 +185,12 @@ public class CardController {
             return new Response(401, e.getMessage());
         } catch (SQLException e) {
             e.printStackTrace();
-            return new Response(500, "Database error: " + e.getMessage());
+            System.err.println("Database error: " + e.getMessage());
+            return new Response(500, "Database error");
         } catch (Exception e) {
             e.printStackTrace();
-            return new Response(500, "Internal server error: " + e.getMessage());
+            System.err.println("Internal server error: " + e.getMessage());
+            return new Response(500, "Internal server error");
         }
     }
 
