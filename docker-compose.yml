@@ -1,20 +1,19 @@
-version: '3.8'
 services:
   db:
-    image: postgres:latest
+    image: postgres:17
     container_name: mtcg-postgres
     environment:
-      - POSTGRES_DB=mtcg
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=${MTCG_DB_PASSWORD:-0000}
+      POSTGRES_DB: mtcg
+      POSTGRES_USER: ${MTCG_DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${MTCG_DB_PASSWORD:-0000}
     ports:
-      - "127.0.0.1:5432:5432"   # only reachable from this machine
+      - "127.0.0.1:5432:5432"   # nur lokal erreichbar
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d mtcg"]
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d mtcg"]
       interval: 10s
       timeout: 5s
       retries: 5
