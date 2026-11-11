@@ -115,7 +115,7 @@ Der Server läuft anschließend auf **http://localhost:10001**.
 
 > Für alles außer lokaler Entwicklung ein eigenes Passwort setzen – `docker compose` liest `MTCG_DB_PASSWORD` ebenfalls.
 >
-> Die Datenbank läuft auf PostgreSQL 17. Ein altes Volume einer anderen Version lässt sich mit `docker compose down -v` zurücksetzen (löscht alle Daten).
+> Die Datenbank läuft auf PostgreSQL 17. `init.sql` wird nur beim ersten Start eines leeren Volumes ausgeführt – ein altes Volume (andere Version oder altes Schema) lässt sich mit `docker compose down -v` zurücksetzen (löscht alle Daten).
 
 ## API
 
@@ -159,15 +159,13 @@ erDiagram
     users ||--o{ user_cards : besitzt
     users ||--o{ decks : "spielt mit"
     users ||--o{ trading_deals : bietet
-    packages ||--o{ cards : enthält
     cards ||--o{ user_cards : "gehört"
     cards ||--o{ decks : "liegt in"
     cards ||--o{ trading_deals : "wird getauscht"
 
     users {
-        int id PK
-        string username UK
-        string password
+        string username PK
+        string password "Hash"
         int coins
         int elo
         int wins
@@ -176,43 +174,42 @@ erDiagram
         string bio
         string image
     }
-    packages {
-        int id PK
-        timestamp created_at
-        bool acquired
-    }
     cards {
         uuid id PK
         string name
-        float damage
-        string element_type
-        string card_type
-        int package_id FK
+        double damage
     }
     user_cards {
-        int user_id FK
+        string user_id FK "users.username"
         uuid card_id FK
     }
     decks {
-        int user_id FK
+        string user_id FK "users.username"
         uuid card_id FK
     }
     trading_deals {
         uuid id PK
         uuid card_to_trade FK
-        int user_id FK
+        string user_id FK "users.username"
         string type
-        float minimum_damage
+        double minimum_damage
+        timestamp created_at
+        bool acquired
+    }
+    packages {
+        int id PK
+        timestamp created_at
+        bool acquired
     }
 ```
 
-Vollständiges Schema: [`init.sql`](init.sql)
+Benutzer werden über ihren **Benutzernamen** referenziert. Das Element wird aus dem Kartennamen abgeleitet (z. B. `WaterGoblin` → Wasser) und nicht gespeichert. Vollständiges Schema: [`init.sql`](init.sql)
 
 ## Tests
 
 ```bash
-mvn test                    # alle Tests (Datenbank muss laufen)
-mvn test -Dtest=BattleTest  # nur die Kampflogik, ohne Datenbank
+mvn test                    # alle Tests; Integrationstests werden ohne Datenbank übersprungen
+mvn test -Dtest=BattleTest  # nur die Kampflogik
 ```
 
 Tests mit **JUnit 5** und **Mockito** – siehe [`src/test/java`](src/test/java):
@@ -220,10 +217,11 @@ Tests mit **JUnit 5** und **Mockito** – siehe [`src/test/java`](src/test/java)
 | Testklasse | Art | Voraussetzung |
 |---|---|---|
 | `BattleTest` | Unit-Test: Elemente, Spezialfälle, Booster | keine |
-| `CardControllerTest` | Integrationstest: Pakete, Deck | laufende DB mit Testbenutzern und -karten |
-| `UserControllerTest` | Integrationstest: Login | laufende DB |
+| `CardControllerTest` | Unit-Test: Validierung, Token-Prüfung, Admin-Rechte | keine |
+| `UserControllerTest` | Unit-Test: Login mit gemocktem Repository | keine |
+| `CardControllerIntegrationTest` | Integrationstest: Pakete anlegen, Deck setzen/lesen, fremde Karten | laufende DB mit Schema aus `init.sql` |
 
-Die CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) kompiliert das Projekt und führt die datenbankunabhängigen Tests aus.
+Die Integrationstests legen eigene Testbenutzer und -karten an und löschen sie danach wieder. Ist keine Datenbank erreichbar, werden sie übersprungen. Die CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) startet einen PostgreSQL-Container und führt **alle** Tests aus.
 
 ## Sicherheit
 

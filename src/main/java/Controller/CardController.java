@@ -164,15 +164,17 @@ public class CardController {
                 return new Response(400, "A deck must contain exactly 4 cards");
             }
 
+            // Format prüfen, bevor die Datenbank angefragt wird
+            for (String cardId : cardIds) {
+                if (!isValidUUID(cardId)) {
+                    return new Response(400, "Invalid card ID format: " + cardId);
+                }
+            }
+
             CardRepository cardRepository = new CardRepository();
             DeckRepository deckRepository = new DeckRepository();
             List<MonsterCard> newDeck = new ArrayList<>();
             for (String cardId : cardIds) {
-
-                if (!isValidUUID(cardId)) {
-                    return new Response(400, "Invalid card ID format: " + cardId);
-                }
-
                 MonsterCard card = cardRepository.findCardById(cardId, username);
                 if (card == null) {
                     return new Response(403, "At least one of the provided cards does not belong to the user or is not available");

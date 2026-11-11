@@ -17,7 +17,12 @@ public class UserController {
     private final UserRepository userRepository;
 
     public UserController() {
-        this.userRepository = new UserRepository();
+        this(new UserRepository());
+    }
+
+    // Repository injizierbar, damit die Controller-Logik ohne Datenbank testbar ist
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public Response createUser(Request request) {
