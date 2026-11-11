@@ -9,6 +9,7 @@
 ![PostgreSQL](https://img.shields.io/badge/DB-PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 ![JUnit](https://img.shields.io/badge/Tests-JUnit%205%20%2B%20Mockito-25A162)
+[![CI](https://github.com/if23b152/MTCG/actions/workflows/ci.yml/badge.svg)](https://github.com/if23b152/MTCG/actions/workflows/ci.yml)
 
 </div>
 
@@ -110,6 +111,7 @@ Der Server läuft anschließend auf **http://localhost:10001**.
 | `MTCG_DB_URL` | `jdbc:postgresql://localhost:5432/mtcg` |
 | `MTCG_DB_USER` | `postgres` |
 | `MTCG_DB_PASSWORD` | `0000` |
+| `MTCG_DB_PORT` | `5432` – nur für `docker compose`, wenn der Port lokal schon belegt ist (dann auch `MTCG_DB_URL` anpassen) |
 
 > Für alles außer lokaler Entwicklung ein eigenes Passwort setzen – `docker compose` liest `MTCG_DB_PASSWORD` ebenfalls.
 >
@@ -209,10 +211,19 @@ Vollständiges Schema: [`init.sql`](init.sql)
 ## Tests
 
 ```bash
-mvn test
+mvn test                    # alle Tests (Datenbank muss laufen)
+mvn test -Dtest=BattleTest  # nur die Kampflogik, ohne Datenbank
 ```
 
-Unit-Tests mit **JUnit 5** und **Mockito** für Kampflogik (Elemente, Spezialfälle, Booster), Kartenverwaltung und Benutzerverwaltung – siehe [`src/test/java`](src/test/java).
+Tests mit **JUnit 5** und **Mockito** – siehe [`src/test/java`](src/test/java):
+
+| Testklasse | Art | Voraussetzung |
+|---|---|---|
+| `BattleTest` | Unit-Test: Elemente, Spezialfälle, Booster | keine |
+| `CardControllerTest` | Integrationstest: Pakete, Deck | laufende DB mit Testbenutzern und -karten |
+| `UserControllerTest` | Integrationstest: Login | laufende DB |
+
+Die CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) kompiliert das Projekt und führt die datenbankunabhängigen Tests aus.
 
 ## Sicherheit
 

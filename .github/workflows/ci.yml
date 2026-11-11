@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Compile
+        run: mvn -B compile test-compile
+      # Card- und User-Tests sind Integrationstests und brauchen eine befüllte Datenbank;
+      # in der CI laufen daher nur die datenbankunabhängigen Tests der Kampflogik.
+      - name: Unit tests (battle logic)
+        run: mvn -B test -Dtest=BattleTest -Dsurefire.failIfNoSpecifiedTests=false

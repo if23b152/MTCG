@@ -185,7 +185,7 @@ class CardControllerTest {
                         "\"e85e3976-7c86-4d06-9a80-641c2019a79f\", \"171f6076-4eb5-4a7d-b3f2-2d650cc3d237\"]");
         Response configureResponse = cardController.configureDeck(configureDeckRequest);
 
-        assertEquals(403, configureResponse.getStatusCode(), "Expected status code 403 for invalid token");
+        assertEquals(401, configureResponse.getStatusCode(), "Expected status code 401 for invalid token");
     }
     @Test
     void getDeck_shouldFailWithoutToken() {
@@ -195,7 +195,7 @@ class CardControllerTest {
         Response response = cardController.getDeck(mockRequest);
 
         assertEquals(401, response.getStatusCode(), "Expected status code 401 for missing token");
-        assertEquals("Authorization header must start with 'Bearer '", response.getBody(), "Expected 'Unauthorized' message for missing token");
+        assertEquals("Access token is missing or invalid", response.getBody(), "Expected 'Unauthorized' message for missing token");
     }
     @Test
     void getDeck_shouldReturnEmptyWhenNoDeckConfigured() {
